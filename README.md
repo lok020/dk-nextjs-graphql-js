@@ -23,4 +23,6 @@ npm run dev - look at the ui in localhost:3000
 
 npm run test - run test case using jest
 
-# ui scatch, audio, pictures are in the public folder
+# IMPORTANT INFORMATION
+- after clone the code, remember to create a .env.local file in the root, in the file, add 1 line: ENDPOINT="". Then fill the string with the endpoint url to make it work.
+- ui scatch, audio, pictures are in the public folder
