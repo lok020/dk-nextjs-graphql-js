@@ -1,0 +1,89 @@
+$accent: #FFCB9A;
+$hover: #977B62;
+$recommend-bg: #19202B;
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $accent;
+  animation: fadeIn ease 1s;
+
+  img{
+    width: 300px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .searchbar{
+    position: relative;
+
+    input{
+      height: 90px;
+      width: 90vw;
+      font-size: 2rem;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      border: 2px solid $accent;
+      color: $accent;
+      padding: 10px;
+      position: sticky;
+    }
+
+    .recommend{
+      background: $recommend-bg;
+      width: 90vw;
+      position: absolute;
+      margin-top: -12px;
+      border: 2px solid white;
+      border-radius: 0 0 15px 15px;
+      overflow-x: hidden;
+
+      div{
+        background: transparent;
+        padding: 5px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        cursor: pointer;
+      }
+
+      div:hover{
+        background: $hover;
+        color: white;
+      }
+    }
+  }
+  
+  button{
+    border: 2px solid $accent;
+    border-radius: 15px;
+    background: transparent;
+    font-size: 2rem;
+    padding: 10px 30px;
+    margin: 10px;
+    transition: all .5s;
+    cursor: pointer;
+  }
+
+  button:hover{
+    border-color: $hover;
+    background: $hover;
+    box-shadow: 0px 0px 20px 1px #888888;
+    transition: all .5s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}

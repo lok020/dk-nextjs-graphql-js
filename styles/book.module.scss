@@ -1,0 +1,53 @@
+@import 'route.scss';
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  animation: fadeIn ease 1s;
+
+  h1{
+    font-size: 4rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  img{
+    width: 30vw;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .info{
+    display: flex;
+    justify-content: center;
+
+    .block{
+      display: flex;
+      padding: 20px;
+
+      strong{
+        padding: 0 15px;
+      }
+
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+  .summary{
+    padding: 100px 80px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}

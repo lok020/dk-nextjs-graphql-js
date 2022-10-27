@@ -1,0 +1,109 @@
+$accent: #FFCB9A;
+$hover: #977B62;
+
+@import "route.scss";
+
+.sortby{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: inherit;
+  margin: 20px 0;
+  animation: fadeIn ease 1s;
+  
+  label{
+    font-size: 25px;
+  }
+
+  select{
+    padding: 5px;
+    margin: 5px;
+
+    option{
+      font-size: 17px;
+    }
+  }
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: inherit;
+  animation: fadeIn ease 1s;
+  
+  .card {
+    margin: 3rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid $accent;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    width: 400px;
+    height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    transition: all .5s;
+
+    .image_container {
+      width: inherit;
+      height: 300px;
+      
+      .image {
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+    
+    .title {
+      margin: 0 0 1rem 0;
+      font-size: 1.25rem;
+    }
+    
+    .price {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .card:hover,
+  .card:focus,
+  .card:active {
+    background: $hover;
+    border-color: $hover;
+    box-shadow: 0px 0px 20px 1px #888888;
+    transition: all .5s;
+  }
+}
+
+@media (max-width: 100px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card{
+    border-color: $accent;
+  }
+
+  .logo img {
+    filter: invert(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
